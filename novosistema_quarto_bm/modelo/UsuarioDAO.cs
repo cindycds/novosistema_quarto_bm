@@ -61,5 +61,32 @@ namespace novosistema_quarto_bm.modelo
 
             return tem;
         }
+        public void Inserir(Usuario  usuario)
+        {
+            Cmd.Connection = Con.ReturnConnection();
+            Cmd.CommandText = @"INSERT INTO usuarios(email, senha, nome, cpf, telefone, endereco, data_nascimento) VALUES(@Email, @Senha, @Nome, @Cpf, @Telefone, @Endereco, @Data_nascimento)";
+
+            Cmd.Parameters.AddWithValue("@Nome", usuario.Nome);
+            Cmd.Parameters.AddWithValue("@CPF", usuario.Cpf);
+            Cmd.Parameters.AddWithValue("@Data_nascimento", usuario.Data_nascimento);
+            Cmd.Parameters.AddWithValue("@Endereco", usuario.Endereco);
+            Cmd.Parameters.AddWithValue("@Email", usuario.Email);
+            Cmd.Parameters.AddWithValue("@Telefone", usuario.Telefone);
+            Cmd.Parameters.AddWithValue("@Senha", usuario.Senha);
+
+            try
+            {
+                //Executa query definida acima.
+                Cmd.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao inserir usuario no banco.\n" + err.Message);
+            }
+            finally
+            {
+                Con.CloseConnection();
+            }
+        }
     }
 }

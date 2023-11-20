@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("nome");
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("cpf");
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("telefone");
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("email");
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("endereço");
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("data de nascimento");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("nome");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("cpf");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("telefone");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("email");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("endereço");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("data de nascimento");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDusuario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lab_nome_sorv = new System.Windows.Forms.Label();
@@ -45,12 +45,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelemail = new System.Windows.Forms.Label();
             this.txbemail = new System.Windows.Forms.TextBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.datadenas = new System.Windows.Forms.MonthCalendar();
             this.label2 = new System.Windows.Forms.Label();
             this.labelsenha = new System.Windows.Forms.Label();
             this.txbsenha = new System.Windows.Forms.TextBox();
             this.labelendereço = new System.Windows.Forms.Label();
-            this.txbendereço = new System.Windows.Forms.TextBox();
+            this.txbendereco = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.mostrar_senha = new System.Windows.Forms.CheckBox();
             this.btn_cadastrar = new System.Windows.Forms.Button();
@@ -111,7 +111,7 @@
             // txbcpf
             // 
             this.txbcpf.Location = new System.Drawing.Point(15, 146);
-            this.txbcpf.Mask = "000.000.000-00";
+            this.txbcpf.Mask = "000,000,000-00";
             this.txbcpf.Name = "txbcpf";
             this.txbcpf.Size = new System.Drawing.Size(222, 20);
             this.txbcpf.TabIndex = 9;
@@ -152,11 +152,12 @@
             this.txbemail.Size = new System.Drawing.Size(222, 20);
             this.txbemail.TabIndex = 12;
             // 
-            // monthCalendar1
+            // datadenas
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(423, 88);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 14;
+            this.datadenas.Location = new System.Drawing.Point(423, 88);
+            this.datadenas.Name = "datadenas";
+            this.datadenas.TabIndex = 14;
+            this.datadenas.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.datadenas_DateChanged);
             // 
             // label2
             // 
@@ -197,25 +198,25 @@
             this.labelendereço.TabIndex = 19;
             this.labelendereço.Text = "ENDEREÇO";
             // 
-            // txbendereço
+            // txbendereco
             // 
-            this.txbendereço.ForeColor = System.Drawing.Color.Black;
-            this.txbendereço.Location = new System.Drawing.Point(831, 230);
-            this.txbendereço.Name = "txbendereço";
-            this.txbendereço.Size = new System.Drawing.Size(222, 20);
-            this.txbendereço.TabIndex = 18;
+            this.txbendereco.ForeColor = System.Drawing.Color.Black;
+            this.txbendereco.Location = new System.Drawing.Point(831, 239);
+            this.txbendereco.Name = "txbendereco";
+            this.txbendereco.Size = new System.Drawing.Size(222, 20);
+            this.txbendereco.TabIndex = 18;
             // 
             // listView1
             // 
             this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16,
-            listViewItem17,
-            listViewItem18});
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.listView1.Location = new System.Drawing.Point(0, 384);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1203, 276);
@@ -247,6 +248,7 @@
             this.btn_cadastrar.Text = "CADASTRAR";
             this.btn_cadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
             // 
             // btnlimpar
             // 
@@ -307,11 +309,11 @@
             this.Controls.Add(this.mostrar_senha);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.labelendereço);
-            this.Controls.Add(this.txbendereço);
+            this.Controls.Add(this.txbendereco);
             this.Controls.Add(this.labelsenha);
             this.Controls.Add(this.txbsenha);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.datadenas);
             this.Controls.Add(this.labelemail);
             this.Controls.Add(this.txbemail);
             this.Controls.Add(this.txbtelefone);
@@ -347,12 +349,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelemail;
         private System.Windows.Forms.TextBox txbemail;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar datadenas;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelsenha;
         private System.Windows.Forms.TextBox txbsenha;
         private System.Windows.Forms.Label labelendereço;
-        private System.Windows.Forms.TextBox txbendereço;
+        private System.Windows.Forms.TextBox txbendereco;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.CheckBox mostrar_senha;
         private System.Windows.Forms.Button btn_cadastrar;
