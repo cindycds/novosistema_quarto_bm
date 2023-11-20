@@ -63,6 +63,26 @@ namespace novosistema_quarto_bm.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _12345 {
+            get {
+                object obj = ResourceManager.GetObject("12345", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _212256 {
+            get {
+                object obj = ResourceManager.GetObject("212256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _31_85302 {
             get {
                 object obj = ResourceManager.GetObject("31_85302", resourceCulture);

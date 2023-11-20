@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using novosistema_quarto_bm.telas;
 
 namespace novosistema_quarto_bm
 {
@@ -16,7 +17,7 @@ namespace novosistema_quarto_bm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new menu());
         }
     }
 }

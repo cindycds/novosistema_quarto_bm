@@ -117,20 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="sorvetepng" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sorvetepng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="taca-de-sorvete (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\taca-de-sorvete (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="31_85302" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\31_85302.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="212256" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\212256.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="12345" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\12345.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_cadastrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMKSURBVHhe7Zkxjw1RFMcfQaKi0NBoRKOm2CglGonEF0BC
+        9Nupt1ki8R0UGnwFEgUSpQKlAh1RsIjg/0v2JScn92Vmdu+dOcP5Jb/kZd7cc87sm3vvmdlFkiRJkiRJ
+        kjRnjzwrN+VT+UF+35bPHLslOYdz/xn2ysvyjfzTU85lDGNnzQn5XJYuso+MJcYsOSe/yNKFDZEYxJoV
+        FMzc9hezJe/JS/K4PLAtnznGd5zjxxFrNn8EbtnSL39fHpNdcA7n+vHEDD8dWLT8nP8lb8ihMIaxNtYL
+        GXphZOW2BeNOLn4JY308coSEvdtvddzKu8VPB3KE7BNoYGyhLGZ95nwXxPALI7nCQYdni2RFrwWxbGw6
+        xnDQytoi2dZqQSwbm1zhoJ+3RbK314JYNja5wuEbHxqcWhDLxiZXOL5JW2TLPwC5wvFe2iJbTgFyheOx
+        tEW2XASfyHCwNdki/7ttcE3aIls2QuQKB+3pa2kLbdEKkyPsK7Mr0haLtR+GyBEWHlWfSVtwzcdhYod/
+        T3hSfpa2cORW7rMmcI6/7ZGYxJ4F52Xp1RbHWNHZ1tjbaXCQzxzju1XjiDkrKLjWS9HZXfwSntt/yNKF
+        9ZGxIZ/9uzgkaVa+ytKFDZEYxCLmLLgg/XNBDYlJ7LCwPfFL/ZalC2Aus7pfl2fkEblcBPnMMb7jnFVr
+        B7Fvy3Bb4X75QJaKfiuvyoOyL5zLGMaWYpKLnCHg1yhdPHN3Xe6TO4WxxCitJQ9liDvhjvTF8cudkrUg
+        Vum/y+SelIvSz/mXkjldG2IS2+YiNzVMwmH5UdqC+OVbXPwSYvs7gRqoZXTuSlsI87Tmbb8Kcvg1gVpG
+        5aj0PTuL1ViQy+amlhovX3qzIW0B3Pq7We2HQi4/FahpFHgb807a5OzZY0NOWwM1jfKm6LS0ienahjQ5
+        tSCn7xiprTk3pU1K6zoV/sUJtTXnkbRJ6d+n4pq0tVBbc15Jm5SHmKkgt62F2przSdqkLRufLshta6G2
+        5vyUNimPs1NBblsLtSVJkiRJkiRJJ4vFX8/T4HvrOu0sAAAAAElFTkSuQmCC
+</value>
   </data>
 </root>
