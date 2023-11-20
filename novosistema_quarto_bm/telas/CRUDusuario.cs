@@ -108,8 +108,7 @@ namespace novosistema_quarto_bm.telas
                     //usuarioInserir.Atualizar(pac);
 
                 MessageBox.Show("Usuário " + user.Nome + (Id == 0 ? " Inserido!" : " Atualizado!"), "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (Id != 1)
-                    this.Close();
+                
 
                 limpar();
                 //crud.AtualizarListView();
