@@ -103,11 +103,14 @@ namespace novosistema_quarto_bm.telas
                 UsuarioDAO usuarioInserir = new UsuarioDAO();
 
                 if (Id == 0)
+                {
                     usuarioInserir.Inserir(user);
+                    MessageBox.Show("Usuario inserido com sucesso!!!");
+                }
                 else
                     //usuarioInserir.Atualizar(pac);
 
-                MessageBox.Show("Usuário " + user.Nome + (Id == 0 ? " Inserido!" : " Atualizado!"), "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuário " + user.Nome + (Id == 0 ? " Inserido!" : " Atualizado!"), "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
 
                 limpar();
