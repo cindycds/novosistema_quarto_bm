@@ -32,9 +32,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lab_nome_sorv = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_cadastrar = new System.Windows.Forms.Button();
             this.button_SAIR = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.estoque = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,6 +65,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.estoque);
             this.panel2.Controls.Add(this.btn_cadastrar);
             this.panel2.Controls.Add(this.button_SAIR);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -70,6 +74,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(291, 626);
             this.panel2.TabIndex = 1;
+            // 
+            // btn_cadastrar
+            // 
+            this.btn_cadastrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btn_cadastrar.Font = new System.Drawing.Font("Palatino Linotype", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
+            this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cadastrar.Location = new System.Drawing.Point(29, 41);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(215, 60);
+            this.btn_cadastrar.TabIndex = 1;
+            this.btn_cadastrar.Text = "Usuarios";
+            this.btn_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
             // 
             // button_SAIR
             // 
@@ -94,21 +113,34 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // btn_cadastrar
+            // estoque
             // 
-            this.btn_cadastrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btn_cadastrar.Font = new System.Drawing.Font("Palatino Linotype", 12.25F, System.Drawing.FontStyle.Bold);
-            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
-            this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cadastrar.Location = new System.Drawing.Point(29, 41);
-            this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(215, 60);
-            this.btn_cadastrar.TabIndex = 1;
-            this.btn_cadastrar.Text = "Cadastrar usuarios";
-            this.btn_cadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_cadastrar.UseVisualStyleBackColor = false;
-            this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
+            this.estoque.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.estoque.Font = new System.Drawing.Font("Palatino Linotype", 12.25F, System.Drawing.FontStyle.Bold);
+            this.estoque.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.estoque.Image = ((System.Drawing.Image)(resources.GetObject("estoque.Image")));
+            this.estoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.estoque.Location = new System.Drawing.Point(29, 133);
+            this.estoque.Name = "estoque";
+            this.estoque.Size = new System.Drawing.Size(215, 75);
+            this.estoque.TabIndex = 2;
+            this.estoque.Text = "Estoque";
+            this.estoque.UseVisualStyleBackColor = false;
+            this.estoque.Click += new System.EventHandler(this.estoque_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 12.25F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(29, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(215, 75);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Relatório de estoque";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // menu
             // 
@@ -140,5 +172,7 @@
         private System.Windows.Forms.Button button_SAIR;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btn_cadastrar;
+        private System.Windows.Forms.Button estoque;
+        private System.Windows.Forms.Button button1;
     }
 }

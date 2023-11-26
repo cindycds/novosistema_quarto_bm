@@ -88,5 +88,87 @@ namespace novosistema_quarto_bm.modelo
                 Con.CloseConnection();
             }
         }
+
+
+
+        public void Atualizar(Usuario usuario)
+        {
+            Cmd.Connection = Con.ReturnConnection();
+            Cmd.CommandText = @"Update usuarios set nome = @Nome, cpf = @CPF,data_nascimento = @Data_nascimento, endereco = @Endereco, email = @Email, telefone = @Telefone WHERE id = @Id";
+
+            Cmd.Parameters.AddWithValue("@Id", usuario.Id);
+            Cmd.Parameters.AddWithValue("@Nome", usuario.Nome);
+            Cmd.Parameters.AddWithValue("@CPF", usuario.Cpf);
+            Cmd.Parameters.AddWithValue("@Data_nascimento", usuario.Data_nascimento);
+            Cmd.Parameters.AddWithValue("@Endereco", usuario.Endereco);
+            Cmd.Parameters.AddWithValue("@Email", usuario.Email);
+            Cmd.Parameters.AddWithValue("@Telefone", usuario.Telefone);
+
+            try
+            {
+                //Executa query definida acima.
+                Cmd.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao inserir usuario no banco.\n" + err.Message);
+            }
+            finally
+            {
+                Con.CloseConnection();
+            }
+        }
+
+
+        public List<Usuario > ListarTodosUsuarios()
+        {
+
+            Cmd.Connection = Con.ReturnConnection();
+
+            Cmd.CommandText = "SELECT * FROM Usuarios"; //fazendo um select na tabela
+
+            List<Usuario > listaDeUsuarios = new List<Usuario>(); //Instancio a list com o tamanho padrão.
+            try
+            {
+                SqlDataReader rd = Cmd.ExecuteReader();
+
+                while (rd.Read())
+                {
+                    Usuario usuario = new Usuario((int)rd["id"], (string)rd["Nome"],
+                        (string)rd["cpf"], (string)rd["telefone"], (string)rd["data_nascimento"], (string)rd["email"],
+                        (string)rd["senha"], (string)rd["endereco"]); 
+                    listaDeUsuarios.Add(usuario);
+                }
+                rd.Close();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao realizar leitura de usuários no banco.\n" + err.Message);
+            }
+            finally
+            {
+                Con.CloseConnection();
+            }
+
+            return listaDeUsuarios;
+        }
+        public void Excluir(int IdUsuario)
+        {
+            Cmd.Connection = Con.ReturnConnection();
+            Cmd.CommandText = @"DELETE FROM Usuarios WHERE id = @id";
+            Cmd.Parameters.AddWithValue("@id", IdUsuario);
+            try
+            {
+                Cmd.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao excluir usuário no banco\n" + err.Message);
+            }
+            finally
+            {
+                Con.CloseConnection();
+            }
+        }
     }
 }

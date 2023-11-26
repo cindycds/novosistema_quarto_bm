@@ -17,7 +17,7 @@ namespace novosistema_quarto_bm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menu());
+            Application.Run(new login());
         }
     }
 }

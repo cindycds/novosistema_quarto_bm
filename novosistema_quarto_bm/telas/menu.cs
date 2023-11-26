@@ -28,5 +28,17 @@ namespace novosistema_quarto_bm.telas
         {
             new CRUDusuario().Show(); //chamando a tela CRUDusuarios
         }
+
+        private void estoque_Click(object sender, EventArgs e)
+        {
+            new CRUDsorvetes().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CRUDsorvetes sovertinho = new CRUDsorvetes();
+
+            sovertinho.pdf();
+        }
     }
 }

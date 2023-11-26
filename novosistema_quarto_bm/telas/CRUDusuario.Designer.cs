@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("nome");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("cpf");
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("telefone");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("email");
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("endereço");
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("data de nascimento");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDusuario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lab_nome_sorv = new System.Windows.Forms.Label();
@@ -57,6 +51,13 @@
             this.btnlimpar = new System.Windows.Forms.Button();
             this.btnexcluiruser = new System.Windows.Forms.Button();
             this.btnvoltar = new System.Windows.Forms.Button();
+            this.columnHeaderid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeadernome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeadercpf = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeadertell = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderendereco = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderemail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderdat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -208,20 +209,26 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeaderid,
+            this.columnHeadernome,
+            this.columnHeadercpf,
+            this.columnHeadertell,
+            this.columnHeaderendereco,
+            this.columnHeaderemail,
+            this.columnHeaderdat});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem7,
-            listViewItem8,
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
             this.listView1.Location = new System.Drawing.Point(0, 384);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1203, 276);
             this.listView1.TabIndex = 20;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.Click += new System.EventHandler(this.listView1_Click);
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // mostrar_senha
             // 
@@ -280,6 +287,7 @@
             this.btnexcluiruser.Text = "EXCLUIR";
             this.btnexcluiruser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnexcluiruser.UseVisualStyleBackColor = false;
+            this.btnexcluiruser.Click += new System.EventHandler(this.btnexcluiruser_Click);
             // 
             // btnvoltar
             // 
@@ -296,6 +304,41 @@
             this.btnvoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnvoltar.UseVisualStyleBackColor = false;
             this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
+            // 
+            // columnHeaderid
+            // 
+            this.columnHeaderid.Text = "Id";
+            this.columnHeaderid.Width = 30;
+            // 
+            // columnHeadernome
+            // 
+            this.columnHeadernome.Text = "Nome";
+            this.columnHeadernome.Width = 250;
+            // 
+            // columnHeadercpf
+            // 
+            this.columnHeadercpf.Text = "Cpf";
+            this.columnHeadercpf.Width = 250;
+            // 
+            // columnHeadertell
+            // 
+            this.columnHeadertell.Text = "Telefone";
+            this.columnHeadertell.Width = 250;
+            // 
+            // columnHeaderendereco
+            // 
+            this.columnHeaderendereco.Text = "Endereço";
+            this.columnHeaderendereco.Width = 250;
+            // 
+            // columnHeaderemail
+            // 
+            this.columnHeaderemail.Text = "Email";
+            this.columnHeaderemail.Width = 250;
+            // 
+            // columnHeaderdat
+            // 
+            this.columnHeaderdat.Text = "data de nascimento";
+            this.columnHeaderdat.Width = 250;
             // 
             // CRUDusuario
             // 
@@ -330,6 +373,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CRUDusuario";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.CRUDusuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -361,5 +405,12 @@
         private System.Windows.Forms.Button btnlimpar;
         private System.Windows.Forms.Button btnexcluiruser;
         private System.Windows.Forms.Button btnvoltar;
+        private System.Windows.Forms.ColumnHeader columnHeaderid;
+        private System.Windows.Forms.ColumnHeader columnHeadernome;
+        private System.Windows.Forms.ColumnHeader columnHeadercpf;
+        private System.Windows.Forms.ColumnHeader columnHeadertell;
+        private System.Windows.Forms.ColumnHeader columnHeaderendereco;
+        private System.Windows.Forms.ColumnHeader columnHeaderemail;
+        private System.Windows.Forms.ColumnHeader columnHeaderdat;
     }
 }
